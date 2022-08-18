@@ -2,11 +2,18 @@ import './App.css';
 import {
   HashRouter,
   NavLink,
+  Routes,
+  Route,
+  useNavigate
 } from 'react-router-dom';
 
 const Todo = () => {
-  return <p>這是 Todo 頁面 
-  </p>;
+  return (
+    <>
+      <p>這是 Todo 頁面 </p>
+      <Layout />
+    </>
+  );
 };
 const Login = () => {
   return <p>這是登入頁面</p>;
@@ -14,6 +21,12 @@ const Login = () => {
 const Register = () => {
   return <p>這是註冊頁面</p>;
 };
+const Layout = () =>{
+  let navigate = useNavigate();
+  <button onClick={()=>navigate("/login")}>
+    登出
+  </button>
+}
 
 function App() {
   return (
