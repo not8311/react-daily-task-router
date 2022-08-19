@@ -29,9 +29,11 @@ const NotFound = () =>{
 
 const Logout = () =>{
   let navigate = useNavigate();
-  <button onClick={()=>navigate("/login")}>
-    登出
-  </button>
+  return(
+    <>
+      <button onClick={()=>navigate("/login")}>登出</button>
+    </>
+  )
 }
 
 const Post = () =>{
